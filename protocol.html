@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,maximum-scale=1, user-scalable=no">
+
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="format-detection" content="email=no">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Privacy rules</title>
+
+</head>
+<style>
+    @charset "UTF-8";
+
+    /***************************baseReset*/
+    html {
+        font-size: 100px;
+    }
+
+    /* iphohe5  */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        html {
+            font-size: 85.333px;
+        }
+    }
+
+    /* iphone6  */
+    @media (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        html {
+            font-size: 100px;
+        }
+    }
+
+    /* iphone6 plus */
+    @media (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+        html {
+            font-size: 110.4px;
+        }
+    }
+
+    /* iPad*/
+    @media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 3) {
+        html {
+            font-size: 204.8px;
+        }
+    }
+
+    /* iPad Pro*/
+    @media (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 3) {
+        html {
+            font-size: 273.067px;
+        }
+    }
+
+    /* iphone6  */
+    /* @media (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    html {
+        font-size: 117.1875px;
+    }
+} */
+    /* iphone6 plus */
+    /* @media (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    html {
+        font-size: 129.375px;
+    }
+} */
+    body {
+        font-family: Helvetica, "微软雅黑", "Helvetica Neue", STHeiTi, Arial, sans-serif;
+        font-size: .12rem;
+        margin: 0;
+        padding: 0;
+        -webkit-user-select: none;
+        -webkit-text-size-adjust: none;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        min-width: 320px;
+        color: #000;
+        position: relative;
+    }
+
+    input,
+    textarea {
+        -webkit-user-select: text;
+        outline: none;
+    }
+
+    textarea::-webkit-resizer {
+        display: none;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    section,
+    nav,
+    article,
+    aside,
+    hgroup,
+    header,
+    footer {
+        display: block;
+    }
+
+    input,
+    textarea,
+    select,
+    button,
+    table {
+        /*  font-size: inherit;
+    font-family: inherit;
+    line-height: inherit */
+    }
+
+    /*
+input{
+	height: 100%;
+	line-height: 100%;
+}
+*/
+    /* select{
+	-webkit-appearance: listbox;
+	-webkit-border: none;
+	border: none;
+	opacity: 0;
+	position: absolute;
+	top: -.3rem;
+	display: inline-block;
+	width: 100%;
+} */
+    body,
+    div,
+    h1,
+    h2,
+    h4,
+    h3,
+    h5,
+    h6,
+    ul,
+    li,
+    dl,
+    dt,
+    dd,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        border: none;
+    }
+
+    ul,
+    ol,
+    li {
+        list-style: none;
+    }
+
+    i,
+    em {
+        font-style: normal;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    nav,
+    section,
+    summary {
+        display: block;
+    }
+
+    * {
+        outline: none;
+    }
+
+    #pop_container,
+    .pop_container {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(54, 53, 53, 0.7);
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+
+    .alert {
+        display: none;
+        position: fixed;
+        width: 100%;
+        bottom: 15%;
+        height: 40px;
+        text-align: center;
+        z-index: 99999;
+    }
+
+    .alert>span {
+        color: #ffffff;
+        line-height: .40rem;
+        font-size: .15rem;
+        padding: .10rem;
+        border-radius: .05rem;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+
+    .bottom {
+        border-top: 1px #dbdbdd solid;
+        position: fixed;
+        bottom: 0;
+        z-index: 2000;
+        width: 100%;
+        line-height: .45rem;
+        background-color: #fafafa;
+        font-size: .15rem;
+        color: #acb3bb;
+    }
+
+    .bottom .nav {
+        display: inline-block;
+        width: 33.3%;
+        float: left;
+        text-align: center;
+    }
+
+    .bottom .nav.hover {
+        color: #444a5a;
+        /*background-color: #dbdbdb; */
+    }
+
+    .bottom .nav:not(:first-child) span {
+        border-left: 1px #dbdbdd solid;
+    }
+
+    .bottom .nav span {
+        display: block;
+        /*font-weight: bolder; */
+    }
+
+    body {
+        background: #fff;
+    }
+
+    .index {
+        width: 90%;
+        background: #fff;
+        margin: 0 auto;
+    }
+
+    .index h1 {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        text-align: center;
+        font-size: 0.24rem;
+        color: rgb(39, 37, 37);
+    }
+
+    .index h3 {
+        padding: 0.15rem 0.15rem;
+        font-size: 0.18rem;
+        color: #333;
+    }
+
+    .index p {
+        padding: 0rem 0.4rem;
+        line-height: 0.25rem;
+        font-size: 0.15rem;
+        color: #666;
+    }
+
+    .index .p1 {
+        padding: 0rem 0.16rem;
+    }
+</style>
+
+<body>
+
+    <div class="index">
+
+        <div class="scroll">
+            <h1>Privacy rules</h1>
+            <p>The following are the privacy rules for this website and the Deep sea roundup platform.</p>
+
+            <h3>1. Personal data involved</h3>
+
+            <p>The main purpose of collecting personal data on this website is to provide you with a smooth, effective and tailor-made experience. This website only collects personal information about you that this website believes is necessary for this purpose and to achieve this goal.</p>
+
+            <p>This website may collect additional information from public and private sources to better understand the users of this website and to tailor the services of this website, resolve disputes and help ensure secure transactions on the website.</p>
+            <p>This website automatically tracks certain information about you in accordance with your behavior on the website of this website. This website uses this information to conduct internal research on the demographics, interests and behaviors of users of this website to better understand you and to provide better services to you and the user community of this website.</p>
+
+            <p>This website uses data collection devices such as "Cookies" on certain pages of this website. "Cookies" are small files that are placed on your hard drive to assist in the provision of tailor-made services on this website. This website also provides certain features that are only available through the use of "Cookies".</p>
+            <p>This website also uses "Cookies" to enable you to reduce the number of passwords entered during a certain period of time. "Cookies" can also assist this website with information that is specifically tailored to your interests.</p>
+
+            <p> If you deliver personal communication information (such as SMS, email or mail) to this website, or if other users or third parties send out information about your activities or logins on this website, this website can Collect this information in your special file.</p>
+            <h3>2. Use of your materials on this website</h3>
+
+            <p>You agree that this website may use personal information about you (including but not limited to the
+            information held on this website about your files and other information obtained by this website from your
+            current and previous activities on this website) Resolving disputes, mediating disputes, helping to ensure
+            secure transactions on this website, and implementing user agreements on this website. This website may
+            sometimes investigate multiple users to identify problems or resolve disputes. In particular, this website
+            may review your information to distinguish users who use multiple usernames or aliases.</p>
+
+            <p>To limit fraudulent, illegal or other criminal activity on the Site and to protect the Site from harm, you
+            agree that the Site may evaluate your Personal Data by manual or automated process.</p>
+
+            <p>You agree that this website may use your personal information to improve the promotion and promotion of
+            this website, to analyze the usage rate of the website, to improve the content and product promotion form
+            of this website, and to make the website content, design and service of this website more compatible.
+            User's request. These uses can improve the pages of this website to adjust the pages of this website to
+            better suit your needs, so that you can get a smoother, more efficient, safer and tailor-made trading
+            experience when using the services of this website.</p>
+
+            <p>You agree that this website uses your information to contact you and to communicate (in some cases)
+            information that is relevant to your interests, such as targeted advertising, administrative advice,
+            product offerings, and related You use the newsletter of this website. By accepting the Service Agreement
+            and the Privacy Policy, you expressly agree to receive such information.</p>
+            <h3>3. Disclosure of your information on this website</h3>
+
+            <p>Although this website uses industry standard practices to protect your personal data, this website does not
+            guarantee that all your personal communications and other personal information will not be disclosed
+            through the channels not covered by this Privacy Policy due to technical limitations.</p>
+
+            <p>This website is obligated to provide your personal data to the judiciary and government departments in
+            accordance with relevant legal requirements. In the event that you fail to perform your obligations in
+            accordance with the service agreement, intermediation agreement or the loan agreement signed with other
+            users of this website, the website has the right to be based on your own judgment or related to the
+            transaction. Other users request to disclose your personal information and make comments.</p>
+            <h3>4. Your use of other users' data</h3>
+
+            <p>In the trading activities provided on this website, you are not entitled to request the personal
+            information of other users on this website, unless the following conditions are met: (a) You have filed a
+            lawsuit against the other users for breach of contract on the activities of this website. (b) Other users
+            related to you (including trading relationships, friends registered on this website) have not returned the
+            principal and interest of the loan within the time limit. (c) This website has been dissolved, liquidated,
+            declared bankrupt or otherwise prevented from recovering the principal and interest of the loan.</p>
+            <h3>5. Email</h3>
+
+            <p>You may not use the services provided on this website or other email forwarding services to post spam or
+            other content that may violate the User Agreement or Privacy Policy of this website.</p>
+
+            <p>If you use the services of this website to send e-mails to e-mail addresses that are not registered on this
+            website, this website will not use any other purpose than to use this e-mail address to send out your
+            e-mail. This website does not rent or sell these email addresses. This website does not permanently store
+            email messages or email addresses.</p>
+            <h3>6. Password security</h3>
+
+            <p>You are responsible for all actions taken with your username and password. Therefore, this website does not
+            recommend that you disclose your username and password on this website to any third party.</p>
+            <h3>7. Rule modification</h3>
+
+            <p>This website may modify this Privacy Policy from time to time in accordance with your comments and the
+            needs of this website to accurately reflect the data collection and disclosure practices of this website.
+            All amendments to these Rules shall take effect on the website at least thirty (30) days prior to the
+            effective date of the proposed effective date.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
